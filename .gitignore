@@ -1,0 +1,30 @@
+# Personal subtitle history and recovery data
+autoback/
+autosave/
+recovered/
+mru.json
+shift_history.json
+
+# Runtime logs, crash dumps, cache/feed data
+log/
+crashdumps/
+feedDump/
+catalog/
+*.log
+*.dmp
+*.corrupted
+
+# Machine-local Aegisub settings with absolute paths
+config.json
+aegisub-motion.json
+aegisub-motion.stats.json
+config/petzku.EncodeClip.json
+config/phos.svg2ass.json
+
+# Empty/legacy local data
+konverter.dat
+
+# OS noise
+Thumbs.db
+Desktop.ini
+.DS_Store
