@@ -1,54 +1,34 @@
-# Case study: chỉnh lyric Kyoukai no Kanata OP theo hướng Tamako-style glow
+# Case Study: Kyoukai no Kanata OP Typesetting Workflow
 
-Case study này ghi lại phần tư duy và snippet hiệu ứng từ một project typesetting thực tế. Repo không kèm video/anime gốc hoặc phụ đề nguồn đầy đủ; chỉ lưu lại cách xử lý kỹ thuật để review workflow.
+This case study records the engineering thinking behind a subtitle-typesetting workflow. The repository does not include original video, anime media or full subtitle sources; it preserves technical decisions and ASS snippets for review.
 
-## Mục tiêu
+## Objective
 
-| Vấn đề ban đầu | Cách xử lý |
-| --- | --- |
-| Màu từng line không thống nhất | Chọn màu theo context scene, tách phase khi scene đổi rõ |
-| Border/blur quá gắt hoặc quá chói | Học theo Tamako Market ED: glow mềm, trắng đọc chính, màu nằm ở layer dưới |
-| Quá nhiều `\t`, clip và line rác | Đưa lyric thường về 2 layer sạch |
-| Shadow làm chữ bẩn | Xóa shadow khỏi lyric chính |
-| Một số line đặc biệt cần giữ style cũ | `Xanh ước mơ` giữ lại block gradient cũ từ bản Fix-Beta1 |
+| Initial issue | Technical handling |
+|---|---|
+| Inconsistent lyric color across nearby lines | Choose color by scene context and split phases when the visual context changes |
+| Border and blur looked too harsh | Use a soft glow layer under a clean white readable layer |
+| Too many transforms, clips and noisy lines | Reduce normal lyrics to two clear layers |
+| Shadow polluted the readable text | Remove shadow from the primary lyric layer |
+| A few special lines needed the old style | Keep a separate block only when the special style carries the intended visual identity |
 
-## Công thức layer chính
+## Main Layer Formula
 
-| Layer | Vai trò | Tag chính |
-| --- | --- | --- |
-| 1 | Glow màu mờ | `\blur`, `\bord`, `\1a&HFF&`, `\3a` và màu `\3c` |
-| 2 | Chữ trắng đọc chính | `\blur0.7`, `\bord0`, `\c&HFFFFFF&` |
+| Layer | Role | Main tags |
+|---|---|---|
+| 1 | Soft colored glow | `\blur`, `\bord`, alpha control and scene-matched border color |
+| 2 | Readable white text | low blur, no border and white fill |
 
-Ví dụ đoạn cuối đã giảm chói:
+## Technical Lessons
 
-```ass
-Dialogue: 1,0:01:22.35,0:01:28.19,OP,,0,0,0,,{\an2\q2\fad(0,180)\blur7.5\bord6.5\1a&HFF&\3a&H3A&\c&H7E5D31&\3c&H7E5D31&}Giờ sang trang, là do anh soi sáng
-Dialogue: 2,0:01:22.35,0:01:28.19,OP,,0,0,0,,{\an2\q2\fad(0,180)\blur0.7\bord0\1a&H00&\c&HFFFFFF&}Giờ sang trang, là do anh soi sáng
-```
+- A clean effect is usually a small number of correct tags, not a large number of animated tags.
+- Use `\fad` for entry and exit timing; avoid transform-heavy blur/border animation unless it is visually necessary.
+- Render cropped subtitle regions for faster glow review before running a full-frame pass.
+- Split phases by scene context instead of forcing one color across every frame.
+- Keep special gradient blocks only when they explain a real visual decision.
 
-## Các quyết định màu đáng chú ý
-
-| Line | Scene | Màu glow |
-| --- | --- | --- |
-| `Chính anh đã níu em lại mà` | Cầu thang, cây xanh, nền dịu | `&H61733F&` |
-| `Cùng nhau che chở...` phase sau | Cảnh sáng/lửa và chuyển sắc | `&H29448C&` |
-| `Giờ sang trang...` phase Mirai | Gần mặt Mirai, tóc nâu ấm | `&H86A7D5&` |
-| `Giờ sang trang...` đoạn cuối | Nền trăng/xanh đêm | `&H7E5D31&` |
-
-## Bài học kỹ thuật
-
-- Đẹp nhất không phải là nhiều tag nhất; đẹp là tag ít nhưng đúng cảnh.
-- Dùng `\fad` cho chuyển vào/ra, tránh lạm dụng `\t` cho blur/bord.
-- Render crop vùng subtitle để đánh giá glow nhanh hơn full frame.
-- Với scene đổi gắt, tách phase theo thời gian thay vì ép một màu chạy suốt.
-- Với line đặc biệt như gradient dọc, có thể giữ block riêng nếu đó là “chất” của câu.
-
-## Lệnh render kiểm tra
+## Verification Command
 
 ```powershell
-ffmpeg -i NCOP.mkv -ss 00:01:24.60 -vf "ass='[Hopeful] Kyoukai no Kanata - NCOP1.ass'" -frames:v 1 preview.png
-```
-
-```powershell
-ffmpeg -i NCOP.mkv -ss 00:01:24.60 -vf "ass='[Hopeful] Kyoukai no Kanata - NCOP1.ass',crop=1500:230:210:820" -frames:v 1 preview-crop.png
+ffmpeg -i input.mp4 -vf "ass=preview.ass,crop=1920:320:0:760" -frames:v 1 preview.png
 ```

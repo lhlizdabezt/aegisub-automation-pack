@@ -1,40 +1,39 @@
-# Ghi chú portfolio
+# Portfolio Notes
 
-Repo này nên được nhìn như một sản phẩm kỹ thuật nhỏ: có vấn đề thật, có công cụ, có quy trình, có tài liệu và có bản phát hành.
+This repository should be read as a small engineering artifact: it has a real workflow problem, scripting tools, documentation, visual evidence and release snapshots.
 
-## Cách repo tự giới thiệu
+## Repository Positioning
 
-| Thành phần | Mục tiêu |
-| --- | --- |
-| README | Giải thích nhanh repo làm gì, dùng cho ai, có gì đáng xem |
-| `automation/` | Phần “engine” thật: macro, include, DLL, config |
-| `examples/` | Bằng chứng có workflow hiệu ứng thật, không chỉ gom file |
-| `docs/` | Giải thích tư duy kỹ thuật để reviewer hiểu quyết định |
-| `assets/` | Visual giúp repo không khô, có cảm giác sản phẩm |
-| Release/tag | Tạo mốc phiên bản rõ để HR hoặc reviewer mở nhanh |
+| Component | Purpose |
+|---|---|
+| README | Explains the repository quickly for HR and engineering review |
+| `automation/` | Contains the actual macro and include material |
+| `examples/` | Preserves technical snippets without redistributing copyrighted media |
+| `docs/` | Explains workflow decisions and verification commands |
+| `assets/` | Provides GitHub-safe visual evidence |
+| Releases and tags | Preserve reviewable snapshots |
 
-## Tín hiệu tốt cho HR
+## HR Signals
 
-- Có mô tả repo rõ, không để tên repo trống nghĩa.
-- Có topic đúng: `aegisub`, `lua`, `moonscript`, `ass-subtitles`, `typesetting`, `karaoke-effects`.
-- Có release ổn định, changelog và asset preview.
-- Có link về GitHub profile và danh sách repo portfolio.
-- Có tài liệu tiếng Việt sạch, không lỗi mã hóa.
+- Clear repository description and topic taxonomy.
+- Relevant topics: `aegisub`, `lua`, `moonscript`, `ass-subtitles`, `typesetting`, `karaoke-effects`.
+- Release-backed README with visual evidence.
+- Link back to the main GitHub profile and portfolio index.
+- English documentation without encoding errors.
 
-## Tín hiệu tốt cho engineering reviewer
+## Engineering Signals
 
-- Có cấu trúc thư mục rõ.
-- Có phân biệt code, config, docs, examples, assets.
-- Có hướng dẫn cài đặt và kiểm tra.
-- Có lệnh render cụ thể để tái tạo preview.
-- Có ghi chú dependency và tác quyền để tránh phân phối bừa media hoặc script bên thứ ba.
+- Clear separation between code, config, docs, examples and assets.
+- Installation and verification commands where they matter.
+- Dependency and copyright notes to avoid careless redistribution.
+- Concrete macro/workflow examples rather than abstract claims.
 
-## Việc nên làm tiếp
+## Next Improvements
 
-| Ưu tiên | Việc |
-| --- | --- |
-| Cao | Thêm ảnh crop preview tự tạo từ snippet không dùng media bản quyền |
-| Cao | Viết script kiểm tra macro load được bằng `aegisub-cli` nếu môi trường có sẵn |
-| Trung bình | Thêm danh sách macro theo nguồn/tác giả nếu xác định được header license |
-| Trung bình | Tách config cá nhân quá riêng tư khỏi config dùng chung |
-| Thấp | Làm demo GIF riêng bằng sample ASS tự tạo |
+| Priority | Work item |
+|---|---|
+| High | Add a self-generated cropped preview image from a synthetic ASS sample |
+| High | Add a macro-load smoke test if an Aegisub CLI environment is available |
+| Medium | Add macro origin/license notes when upstream headers are identifiable |
+| Medium | Separate personal-only config from reusable config |
+| Low | Add a demo GIF generated from a fully synthetic subtitle sample |

@@ -1,23 +1,21 @@
-# Release v1.1.0 - Portfolio hóa Aegisub Automation Pack
+# Release v1.1.0 - Aegisub Automation Pack Portfolio Refresh
 
-## Nội dung chính
+## Main Changes
 
-- Sửa README và CHANGELOG tiếng Việt về UTF-8 sạch.
-- Thêm case study hiệu ứng ASS theo hướng Tamako-style glow.
-- Thêm snippet hiệu ứng 2 layer, phase màu và line giảm chói.
-- Thêm visual pipeline SVG.
-- Cập nhật định vị repo theo hướng portfolio kỹ thuật cho HR và engineering review.
+- Reworked the README into a portfolio-facing English structure.
+- Added an ASS effects case study and a two-layer glow pattern note.
+- Added a pipeline SVG visual.
+- Clarified the repository's role as workflow automation evidence for HR and engineering review.
 
-## Điểm đáng xem
+## Review Points
 
-| Hạng mục | Đường dẫn |
-| --- | --- |
+| Item | Path |
+|---|---|
+| Main README | `README.md` |
+| ASS effect notes | `docs/HIEU_UNG_ASS.md` |
 | Case study | `docs/CASE_STUDY_KYOUKAI.md` |
-| Ghi chú hiệu ứng | `docs/HIEU_UNG_ASS.md` |
-| Snippet 2 layer | `examples/effects/tamako-glow-2-layer.ass` |
-| Snippet phase màu | `examples/effects/kyoukai-phase-color-snippets.ass` |
-| Visual pipeline | `assets/ass-effect-pipeline.svg` |
+| Effect snippets | `examples/effects/kyoukai-phase-color-snippets.ass` |
 
-## Ghi chú
+## Notes
 
-Repo không kèm video/anime gốc hoặc subtitle nguồn đầy đủ. Các ví dụ chỉ là snippet kỹ thuật để mô tả workflow.
+The repository does not include original anime/video media or full source subtitles. Examples are technical snippets used to document workflow decisions.
