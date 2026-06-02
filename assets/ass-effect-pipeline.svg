@@ -20,7 +20,7 @@
       </feMerge>
     </filter>
     <style>
-      @keyframes moveDash { to { stroke-dashoffset: -260; } }
+      @keyframes moveDash { to { } }
       @keyframes pulse { 0%,100% { opacity: .72; transform: scale(1); } 50% { opacity: 1; transform: scale(1.035); } }
       @keyframes scan { 0% { transform: translateX(-160px); opacity: 0; } 18%,80% { opacity: .9; } 100% { transform: translateX(1230px); opacity: 0; } }
       .title { font: 900 44px 'Segoe UI', Arial, sans-serif; fill: #ffffff; }
@@ -42,7 +42,7 @@
   </g>
   <text x="60" y="72" class="title">Aegisub ASS Effect Pipeline</text>
   <text x="62" y="108" class="subtitle">Timing -> phase color -> glow layer -> white layer -> FFmpeg preview -> release</text>
-  <path d="M130 214 H1068" fill="none" stroke="url(#line)" stroke-width="7" stroke-linecap="round" stroke-dasharray="28 18" filter="url(#glow)" style="animation: moveDash 7s linear infinite"/>
+  <path d="M130 214 H1068" fill="none" stroke="url(#line)" stroke-width="7" stroke-linecap="round" filter="url(#glow)" style="animation: moveDash 7s linear infinite"/>
   <g style="animation: pulse 5.8s ease-in-out infinite; transform-origin: 170px 214px">
     <rect class="box" x="54" y="150" width="190" height="128" rx="18"/>
     <text x="82" y="190" class="box-title">01 Timing</text>

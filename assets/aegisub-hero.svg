@@ -23,7 +23,6 @@
     <style>
       @keyframes floatA { 0%,100% { transform: translateY(0); opacity: .72; } 50% { transform: translateY(-11px); opacity: 1; } }
       @keyframes floatB { 0%,100% { transform: translateY(0); opacity: .40; } 50% { transform: translateY(10px); opacity: .88; } }
-      @keyframes dash { to { stroke-dashoffset: -240; } }
       @keyframes scan { 0% { transform: translateX(-200px); opacity: 0; } 18%,76% { opacity: .95; } 100% { transform: translateX(1240px); opacity: 0; } }
       @keyframes blink { 0%,44%,100% { opacity: .25; } 50%,86% { opacity: 1; } }
       .chip { fill: rgba(15,23,42,.46); stroke: rgba(255,255,255,.24); stroke-width: 1; }
@@ -44,7 +43,7 @@
     </circle>
   </g>
   <path d="M0 236 C150 188 286 270 442 224 C608 174 738 180 892 220 C1038 258 1112 204 1200 220 L1200 300 L0 300 Z" fill="#020617" opacity=".30"/>
-  <path d="M-10 216 C150 172 278 246 438 204 C610 158 744 160 902 204 C1034 242 1112 190 1210 206" fill="none" stroke="url(#pulse)" stroke-width="4" stroke-linecap="round" stroke-dasharray="24 20" filter="url(#glow)" style="animation: dash 8s linear infinite"/>
+  <path d="M-10 216 C150 172 278 246 438 204 C610 158 744 160 902 204 C1034 242 1112 190 1210 206" fill="none" stroke="url(#pulse)" stroke-width="4" stroke-linecap="round" filter="url(#glow)" style=""/>
   <g style="animation: floatA 6s ease-in-out infinite">
     <rect x="72" y="48" width="206" height="54" rx="16" class="chip"/>
     <text x="98" y="82" class="small">Lua Macros</text>
