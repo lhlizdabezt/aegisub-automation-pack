@@ -1,5 +1,18 @@
 # Changelog
 
+## Portfolio Review Refresh - 2026-06-03
+
+### Added
+
+- Rebuilt the README with a full reviewer map, visual evidence section, usage steps, verification commands, FAQ and contact table.
+- Added direct README references to the workflow GIF and synthetic ASS preview PNGs.
+
+### Improved
+
+- Clarified that this is workflow automation and documentation evidence, not a commercial subtitle platform.
+- Removed a crowded caption band from `assets/aegisub-hero.svg` to prevent visual overlap.
+- Preserved English-only public copy and ASCII-safe SVG text.
+
 ## English Visual Portfolio Refresh - 2026-06-02
 
 ### Added

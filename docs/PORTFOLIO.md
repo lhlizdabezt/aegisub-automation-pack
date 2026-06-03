@@ -13,6 +13,17 @@ This repository should be read as a small engineering artifact: it has a real wo
 | `assets/` | Provides GitHub-safe visual evidence |
 | Releases and tags | Preserve reviewable snapshots |
 
+## Current Review Status
+
+| Item | Status |
+|---|---|
+| README language | US English |
+| Profile fit | Automation tooling and subtitle workflow scripting |
+| Visual assets | Self-hosted SVG/GIF/PNG files under `assets/` |
+| SVG text policy | English and ASCII-safe |
+| Boundary note | No original anime/video media or full source subtitle redistribution |
+| Release model | Latest release points reviewers to a stable source snapshot |
+
 ## HR Signals
 
 - Clear repository description and topic taxonomy.
