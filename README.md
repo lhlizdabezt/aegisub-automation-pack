@@ -62,7 +62,7 @@ Luong Hai Long uses this repository to demonstrate scripting, automation and wor
 
 ## Release and Tagging Notes
 
-This repository is maintained as part of an English-facing engineering portfolio. Releases and tags are used to preserve reviewable snapshots of the project, including source state, documentation updates and any available visual or report assets.
+This repository is maintained as part of an English-facing engineering portfolio. Releases and tags are used to preserve reviewable snapshots of the project, including source state, documentation updates and any available visual or report assets. Thanks
 
 ## Writing Standard
 
