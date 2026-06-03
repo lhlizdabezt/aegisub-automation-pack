@@ -66,4 +66,4 @@ This repository is maintained as part of an English-facing engineering portfolio
 
 ## Writing Standard
 
-The README follows an evidence-first style: direct technical nouns, clear project boundaries, release-backed artifacts and no inflated claims beyond what the repository can support.
+The README follows an evidence-first style: direct technical nouns, clear project boundaries, release-backed artifacts and no inflated claims beyond what the repository can support. Thanks
