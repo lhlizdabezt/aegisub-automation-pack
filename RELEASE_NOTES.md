@@ -1,17 +1,15 @@
-# Portfolio Review Refresh - 2026-06-03
+# Portfolio Refresh - August 29, 2026
 
 ## Scope
 
-This release refreshes `aegisub-automation-pack` for English-facing GitHub portfolio review, with stronger reviewer guidance, clearer repository boundaries and checked visual assets.
+This release keeps the Aegisub automation pack focused on its actual Lua, MoonScript, ASS, and synthetic-preview material while removing the duplicate profile-view badge from the project README.
 
-## Changes
+## Included
 
-- Rebuilt the README into a complete reviewer guide with overview, evidence map, structure, usage steps, verification commands, FAQ and contact links.
-- Added direct references to repository images: line-free SVG motion, workflow GIF and static ASS preview PNGs.
-- Tightened scope language so the repository is presented as workflow automation evidence, not commercial subtitle software.
-- Removed the crowded caption band from `assets/aegisub-hero.svg` so labels do not overlap.
-- Kept SVG text English and ASCII-safe.
+- Tagged source archive containing automation macros, shared modules, configurations, synthetic ASS examples, and documentation.
+- Checked workflow GIF, SVG visual, and synthetic preview PNGs.
+- Release link updated to this immutable snapshot.
 
-## Review Context
+## Boundary
 
-The updated repository is designed for HR screening, engineering review, academic portfolio review and fast GitHub mobile inspection.
+The repository documents a typesetting and workflow-automation pack. It does not distribute original video media or claim authorship of every bundled upstream Aegisub dependency.

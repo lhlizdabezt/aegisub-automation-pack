@@ -3,7 +3,6 @@
 <p align="center">
   <a href="https://github.com/lhlizdabezt/aegisub-automation-pack/releases/latest"><img src="https://img.shields.io/github/v/release/lhlizdabezt/aegisub-automation-pack?style=for-the-badge&logo=github&label=Release" alt="Latest release for aegisub-automation-pack" /></a>
   <a href="https://github.com/lhlizdabezt/aegisub-automation-pack/tags"><img src="https://img.shields.io/github/v/tag/lhlizdabezt/aegisub-automation-pack?style=for-the-badge&logo=git&label=Tag" alt="Latest tag for aegisub-automation-pack" /></a>
-  <a href="https://github.com/lhlizdabezt"><img src="https://komarev.com/ghpvc/?username=lhlizdabezt&label=Profile%20Views&color=0f766e&style=for-the-badge" alt="GitHub profile views counter" /></a>
   <img src="https://img.shields.io/badge/Portfolio-US%20English%20review%20ready-0f766e?style=for-the-badge" alt="US English portfolio ready" />
 </p>
 
@@ -23,7 +22,7 @@ It is presented as a portfolio artifact for scripting, workflow automation and m
 | Owner | [Luong Hai Long](https://github.com/lhlizdabezt) |
 | Portfolio track | Automation tooling, subtitle workflow scripting, technical documentation |
 | Primary stack | Aegisub, Lua, MoonScript, ASS subtitles, automation macros, motion tracking, FFmpeg/libass review |
-| Release status | [Latest release](https://github.com/lhlizdabezt/aegisub-automation-pack/releases/latest) |
+| Release | [2026 portfolio refresh](https://github.com/lhlizdabezt/aegisub-automation-pack/releases/tag/portfolio-refresh-2026-08-29) |
 | Tags | [Version tags](https://github.com/lhlizdabezt/aegisub-automation-pack/tags) |
 | Profile links | [GitHub](https://github.com/lhlizdabezt), [LinkedIn](https://www.linkedin.com/in/lhlizdabezt), [YouTube](https://www.youtube.com/@lhlizdabezt), [TikTok](https://www.tiktok.com/@wageseadrake) |
 
